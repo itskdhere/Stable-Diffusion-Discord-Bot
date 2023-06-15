@@ -10,7 +10,10 @@ Comming Soon..
 
 <!-- ----------------------------------------------------- -->
 
+
 ### Huggingface Space Configuration:
+
+
 ---
 title: Stable Diffusion Discord Bot
 emoji: 🐢
