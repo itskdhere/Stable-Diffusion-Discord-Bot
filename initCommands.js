@@ -35,7 +35,7 @@ const commands = [
                 required: true
             },
             {
-                name: "negative prompt",
+                name: "negative_prompt",
                 description: "Your Negative Prompt",
                 type: 3,
                 required: false

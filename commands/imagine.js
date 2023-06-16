@@ -3,7 +3,7 @@ import hf_ws from "../huggingface_websocket/hugging_face.js";
 
 async function imagineInteractionHandler(interaction) {
   const prompt = interaction.options.getString("prompt");
-  const negativePrompt = interaction.options.getString("negative prompt");
+  const negativePrompt = interaction.options.getString("negative_prompt");
 
   console.log(prompt);
   console.log(negativePrompt);
