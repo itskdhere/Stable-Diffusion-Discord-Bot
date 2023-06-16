@@ -3,15 +3,39 @@
     "models": [
         {
             "id": "sd-v1-4",
-            "name": "Stable Diffusion v1.4",
+            "name": "(4 Images) Stable Diffusion v1.4",
             "uri": "wss://stabilityai-stable-diffusion-1.hf.space/queue/join",
             "guidanceScale": "N/A"
         },
         {
             "id": "sd-v2-1",
-            "name": "Stable Diffusion v2.1",
+            "name": "(4 Images) Stable Diffusion v2.1",
             "uri": "wss://stabilityai-stable-diffusion.hf.space/queue/join",
             "guidanceScale": "9"
+        },
+        {
+            "id": "sd-v1-4-img1",
+            "name": "(1 Image) Stable Diffusion v1.4",
+            "uri": "wss://itskdhere-compvis-stable-diffusion-v1-4.hf.space/queue/join",
+            "guidanceScale": "N/A"
+        },
+        {
+            "id": "sd-v2-0-img1",
+            "name": "(1 Image) Stable Diffusion v2.0",
+            "uri": "wss://itskdhere-stabilityai-stable-diffusion-2.hf.space/queue/join",
+            "guidanceScale": "N/A"
+        },
+        {
+            "id": "sd-v2-1-img1",
+            "name": "(1 Image) Stable Diffusion v2.1",
+            "uri": "wss://itskdhere-stabilityai-stable-diffusion-2-1.hf.space/queue/join",
+            "guidanceScale": "N/A"
+        },
+        {
+            "id": "sd-v2-1-base-img1",
+            "name": "(1 Image) Stable Diffusion v2.1 Base",
+            "uri": "wss://itskdhere-stabilityai-stable-diffusion-2-1-base.hf.space/queue/join",
+            "guidanceScale": "N/A"
         }
     ]
 }
