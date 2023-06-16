@@ -30,7 +30,7 @@ async function settingsInteractionHandler(interaction) {
     } else if (model != null && guidanceScale == null) {
         let newSettings = settings;
         newSettings.default = model;
-        fs.writeFileSync('./../settings.json', JSON.stringify(newSettings, null, 2));
+        fs.writeFileSync('./settings.json', JSON.stringify(newSettings, null, 2));
         console.log(newSettings);
         await interaction.reply({ content: `Done!` });
 
@@ -44,7 +44,7 @@ async function settingsInteractionHandler(interaction) {
             await interaction.reply({ content: `This model does not support guidance scaling.` });
         } else {
             newSettings.models[i].guidanceScale = guidanceScale;
-            fs.writeFileSync('./../settings.json', JSON.stringify(newSettings, null, 2));
+            fs.writeFileSync('./settings.json', JSON.stringify(newSettings, null, 2));
             console.log(newSettings);
             await interaction.reply({ content: `Done!` });
         }
@@ -60,7 +60,7 @@ async function settingsInteractionHandler(interaction) {
             await interaction.reply({ content: `This model does not support guidance scaling.` });
         } else {
             newSettings.models[i].guidanceScale = guidanceScale;
-            fs.writeFileSync('./../settings.json', JSON.stringify(newSettings, null, 2));
+            fs.writeFileSync('./settings.json', JSON.stringify(newSettings, null, 2));
             console.log(newSettings);
             await interaction.reply({ content: `Done!` });
         }
