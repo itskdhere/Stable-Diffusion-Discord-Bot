@@ -33,6 +33,12 @@ const commands = [
                 description: "Your Image Prompt",
                 type: 3,
                 required: true
+            },
+            {
+                name: "negative prompt",
+                description: "Your Negative Prompt",
+                type: 3,
+                required: false
             }
         ]
     },

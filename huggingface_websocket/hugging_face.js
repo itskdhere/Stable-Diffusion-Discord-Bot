@@ -5,7 +5,7 @@ import base64ToImg from './base64_to_img.js';
 
 // import models from './../models.json' assert { type: "json" };
 
-async function hf_ws(sessionHash, prompt, interaction) {
+async function hf_ws(interaction, sessionHash, prompt, negativePrompt) {
     const ws = new WebSocket('wss://stabilityai-stable-diffusion.hf.space/queue/join');
 
     ws.on('error', console.error);
@@ -28,7 +28,6 @@ async function hf_ws(sessionHash, prompt, interaction) {
 
             case 'send_data':
                 // const send_data_payload = JSON.stringify({ "fn_index": 3, "data": [prompt], "session_hash": sessionHash });
-                const negativePrompt = "";
                 const guidanceScale = 9;
                 const send_data_payload = JSON.stringify({ fn_index: 3, data: [`${prompt}`, `${negativePrompt}`, `${guidanceScale}`], session_hash: sessionHash });
                 ws.send(send_data_payload);
