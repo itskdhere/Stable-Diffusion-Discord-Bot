@@ -3,8 +3,10 @@ import chalk from 'chalk';
 
 import base64ToImg from './base64_to_img.js';
 
+// import models from './../models.json' assert { type: "json" };
+
 async function hf_ws(sessionHash, prompt, interaction) {
-    const ws = new WebSocket('wss://stabilityai-stable-diffusion-1.hf.space/queue/join');
+    const ws = new WebSocket('wss://stabilityai-stable-diffusion.hf.space/queue/join');
 
     ws.on('error', console.error);
 
@@ -25,7 +27,10 @@ async function hf_ws(sessionHash, prompt, interaction) {
                 break;
 
             case 'send_data':
-                const send_data_payload = JSON.stringify({ "fn_index": 3, "data": [prompt], "session_hash": sessionHash });
+                // const send_data_payload = JSON.stringify({ "fn_index": 3, "data": [prompt], "session_hash": sessionHash });
+                const negativePrompt = "";
+                const guidanceScale = 9;
+                const send_data_payload = JSON.stringify({ fn_index: 3, data: [`${prompt}`, `${negativePrompt}`, `${guidanceScale}`], session_hash: sessionHash });
                 ws.send(send_data_payload);
                 console.log(chalk.blueBright(send_data_payload));
                 break;
@@ -35,7 +40,7 @@ async function hf_ws(sessionHash, prompt, interaction) {
                 ws.close();
                 let attachmentArr = base64ToImg(output, sessionHash);
                 const files = Array.isArray(attachmentArr) ? attachmentArr : [];
-                interaction.editReply({ content: `"${prompt}"\n` , files: files });
+                interaction.editReply({ content: `"${prompt}"\n`, files: files });
                 console.log('\n\n');
                 console.log(attachmentArr);
                 console.log('\n\n');
