@@ -5,7 +5,7 @@ function base64ToImg(output, sessionHash) {
     let attachmentArr = [];
     let i;
 
-    for (i = 0; i <= 3; i++) {
+    for (i = 0; i < output.length; i++) {
         const base64Str = output[i];
 
         const base64Data = base64Str.replace(/^data:image\/jpeg;base64,/, "");

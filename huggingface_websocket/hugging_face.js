@@ -54,6 +54,8 @@ async function hf_ws(interaction, sessionHash, prompt, negativePrompt) {
 
                 } else if (settings.models[i].id == 'sd-v2-1') {
                     send_data_payload = JSON.stringify({ fn_index: 3, data: [`${prompt}`, `${negativePrompt}`, `${settings.models[i].guidanceScale}`], session_hash: sessionHash });
+                } else {
+                    send_data_payload = JSON.stringify({ "data": [`${prompt}`], "event_data": null, "fn_index": 0, "session_hash": `${sessionHash}` });
                 }
 
                 ws.send(send_data_payload);
