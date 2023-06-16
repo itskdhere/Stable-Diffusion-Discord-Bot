@@ -75,10 +75,17 @@ async function hf_ws(interaction, sessionHash, prompt, negativePrompt) {
 
             case 'process_completed':
                 interaction.editReply({ content: "Uploading...⬆" });
-                let output = message.output.data[0];
                 ws.close();
 
-                let attachmentArr = base64ToImg(output, sessionHash);
+                let output; let attachmentArr;
+
+                if (settings.models[i].id == 'sd-v1-4' || settings.models[i].id == 'sd-v2-1') {
+                    output = message.output.data[0];
+                } else {
+                    output = message.output.data;
+                }
+
+                attachmentArr = base64ToImg(output, sessionHash);
                 const files = Array.isArray(attachmentArr) ? attachmentArr : [];
 
                 interaction.editReply({ content: `"${prompt}" ~ ${settings.models[i].name} \n`, files: files });
