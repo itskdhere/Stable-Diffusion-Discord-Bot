@@ -37,14 +37,23 @@ async function hf_ws(interaction, sessionHash, prompt, negativePrompt) {
 
         switch (message.msg) {
             case 'send_hash':
-                const send_hash_payload = JSON.stringify({ "session_hash": sessionHash, "fn_index": 3 });
+                let send_hash_payload;
+
+                if (settings.models[i].id == 'sd-v1-4' || settings.models[i].id == 'sd-v2-1') {
+                    send_hash_payload = JSON.stringify({ "session_hash": sessionHash, "fn_index": 3 });
+                } else {
+                    send_hash_payload = JSON.stringify({ "session_hash": sessionHash, "fn_index": 0 });
+                }
+
                 ws.send(send_hash_payload);
                 console.log(chalk.blueBright(send_hash_payload));
                 break;
 
+
             case 'process_starts':
                 interaction.editReply({ content: "Generating Images..." });
                 break;
+
 
             case 'send_data':
                 let send_data_payload;
@@ -62,6 +71,7 @@ async function hf_ws(interaction, sessionHash, prompt, negativePrompt) {
                 interaction.editReply({ content: "Starting..." });
                 console.log(chalk.blueBright(send_data_payload));
                 break;
+
 
             case 'process_completed':
                 interaction.editReply({ content: "Uploading...⬆" });
