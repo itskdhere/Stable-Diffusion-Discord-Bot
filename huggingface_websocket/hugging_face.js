@@ -39,7 +39,7 @@ async function hf_ws(interaction, sessionHash, prompt, negativePrompt) {
                 ws.close();
                 let attachmentArr = base64ToImg(output, sessionHash);
                 const files = Array.isArray(attachmentArr) ? attachmentArr : [];
-                interaction.editReply({ content: `"${prompt}"\n`, files: files });
+                interaction.editReply({ content: `"${prompt}" ~ Stable Diffusion v2.1 \n`, files: files });
                 console.log('\n\n');
                 console.log(attachmentArr);
                 console.log('\n\n');
