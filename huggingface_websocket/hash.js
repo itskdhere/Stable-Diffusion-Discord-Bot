@@ -1,5 +1,3 @@
-import crypto from 'crypto';
-
 async function hash(max) {
     const chars = "qwertyuopasdfghjklizxcvbnm0123456789";
 

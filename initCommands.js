@@ -25,18 +25,18 @@ const initDiscordCommands = async () => {
 const commands = [
     {
         name: 'imagine',
-        description: 'Generate an image based on the prompt',
+        description: 'Generate an image based on a text prompt',
         dm_permission: false,
         options: [
             {
                 name: "prompt",
-                description: "Your Image Prompt",
+                description: "Image Prompt",
                 type: 3,
                 required: true
             },
             {
-                name: "negative_prompt",
-                description: "Your Negative Prompt",
+                name: "negative-prompt",
+                description: "Negative Prompt (only for Stable Diffusion v2.1)",
                 type: 3,
                 required: false
             }
@@ -44,14 +44,26 @@ const commands = [
     },
     {
         name: 'settings',
-        description: 'Change Bot Settings',
+        description: 'View/Change Bot Settings',
         dm_permission: false,
         options: [
             {
                 name: "model",
-                description: "Select a Model",
+                description: "Select Default Model",
                 type: 3,
-                required: true
+                required: false,
+                choices: [
+                    { name: "Stable Diffusion v1.4", value: "sd-v1-4" },
+                    { name: "Stable Diffusion v2.1", value: "sd-v2-1" }
+                ]
+            },
+            {
+                name: "guidance-scale",
+                description: "Set Guidance Scale (only for v2.1) [Value between 0 and 50]",
+                type: 3,
+                min_value: 0,
+                max_value: 50,
+                required: false
             }
         ]
     },

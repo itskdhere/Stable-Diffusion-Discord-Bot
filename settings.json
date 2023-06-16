@@ -1,0 +1,17 @@
+{
+    "default": "sd-v2-1",
+    "models": [
+        {
+            "id": "sd-v1-4",
+            "name": "Stable Diffusion v1.4",
+            "uri": "wss://stabilityai-stable-diffusion-1.hf.space/queue/join",
+            "guidanceScale": "N/A"
+        },
+        {
+            "id": "sd-v2-1",
+            "name": "Stable Diffusion v2.1",
+            "uri": "wss://stabilityai-stable-diffusion.hf.space/queue/join",
+            "guidanceScale": "9"
+        }
+    ]
+}

@@ -14,13 +14,8 @@ function base64ToImg(output, sessionHash) {
 
         const attachment = new AttachmentBuilder(bufferData, { name: `${sessionHash}_${i}.jpeg` });
 
-        // attachment.attachment = bufferData;
-        // attachment.name = `${sessionHash}_${i}.jpeg`;
-
         attachmentArr.push(attachment);
     }
-
-    console.log("attachmentArr: " + attachmentArr);
 
     return attachmentArr;
 }
