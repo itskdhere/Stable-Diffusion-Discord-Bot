@@ -1,20 +1,13 @@
----
-title: Stable Diffusion Discord Bot
-emoji: 🐢
-colorFrom: blue
-colorTo: red
-sdk: docker
-pinned: false
-license: mit
----
-
-
 <h1 align="center">Stable Diffusion Discord Bot</h1>
 
 <p align="center">
 <a href="https://redirect.itskdhere.workers.dev/server/support/invite" title="Join Support Server"><img alt="Discord" src="https://img.shields.io/discord/917792741054894131?color=%235865F2&label=Chat&logo=discord&logoColor=%23FFFFFF&style=for-the-badge"></a>
 </p>
 
+<p align="center">
+<img width="500px" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/blob/main/screenshots/ss-imagine-0.png" >
+<img width="500px" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/blob/main/screenshots/ss-imagine-1.png" >
+</p>
 
 Generate Images From A Text Prompt Using Various Stable Diffusion Models Right Inside Discord Chat 😀
 
