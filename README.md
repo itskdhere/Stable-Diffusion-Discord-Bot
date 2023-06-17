@@ -5,7 +5,19 @@
 <img width="420px" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/blob/main/screenshots/ss-imagine-1.png" >
 </p>
 <h4 align="center"><a href="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/tree/main/screenshots">More ScreenShots 📸</a></h4>
+
 <hr>
+
+<p align="center">
+<a href="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/actions/workflows/codeql.yml" title="CodeQL">
+<img alt="CodeQL" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/actions/workflows/codeql.yml/badge.svg">
+</a>
+<a href="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/actions/workflows/ossar.yml" title="OSSAR">
+<img alt="OSSAR" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/actions/workflows/ossar.yml/badge.svg">
+</a>
+</p>
+
+
 <p align="center">
 <a href="https://redirect.itskdhere.workers.dev/server/support/invite" target="_blank" title="Join Support Server"><img alt="Discord" src="https://img.shields.io/discord/917792741054894131?color=%235865F2&label=Chat&logo=discord&logoColor=%23FFFFFF&style=for-the-badge"></a>
 </p>
