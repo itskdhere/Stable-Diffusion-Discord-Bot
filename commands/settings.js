@@ -24,7 +24,7 @@ async function settingsInteractionHandler(interaction) {
         const modelName = settings.models[i].name;
         const modelGuidanceScale = settings.models[i].guidanceScale;
 
-        await interaction.reply({ content: `__Current Settings:__ \n\n**Model ID:** ${modelId}\n**Model Name:** ${modelName}\n**Guidance Scale:** ${modelGuidanceScale}\n</>` });
+        await interaction.reply({ content: `__**Current Settings:**__ \n\n**Model ID:** ${modelId}\n**Model Name:** ${modelName}\n**Guidance Scale:** ${modelGuidanceScale}\n</>` });
 
 
     } else if (model != null && guidanceScale == null) {
@@ -39,7 +39,7 @@ async function settingsInteractionHandler(interaction) {
 
         fs.writeFileSync('./settings.json', JSON.stringify(newSettings, null, 2));
         console.log(newSettings);
-        await interaction.reply({ content: `✅ Successfully Changed Default Model From ${oldDefaultModelName} To **${newDefaultModelName}**` });
+        await interaction.reply({ content: `✅ Successfully Changed Default Model From "${oldDefaultModelName}" To "**${newDefaultModelName}**"` });
 
 
     } else if (model == null && guidanceScale != null) {
