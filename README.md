@@ -1,12 +1,13 @@
 <h1 align="center">Stable Diffusion Discord Bot</h1>
 
 <p align="center">
-<a href="https://redirect.itskdhere.workers.dev/server/support/invite" title="Join Support Server"><img alt="Discord" src="https://img.shields.io/discord/917792741054894131?color=%235865F2&label=Chat&logo=discord&logoColor=%23FFFFFF&style=for-the-badge"></a>
+<img width="400px" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/blob/main/screenshots/ss-imagine-0.png" >
+<img width="420px" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/blob/main/screenshots/ss-imagine-1.png" >
 </p>
-
+<h4 align="center"><a href="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/tree/main/screenshots">More ScreenShots 📸</a></h4>
+<hr>
 <p align="center">
-<img width="500px" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/blob/main/screenshots/ss-imagine-0.png" >
-<img width="500px" src="https://github.com/itskdhere/Stable-Diffusion-Discord-Bot/blob/main/screenshots/ss-imagine-1.png" >
+<a href="https://redirect.itskdhere.workers.dev/server/support/invite" target="_blank" title="Join Support Server"><img alt="Discord" src="https://img.shields.io/discord/917792741054894131?color=%235865F2&label=Chat&logo=discord&logoColor=%23FFFFFF&style=for-the-badge"></a>
 </p>
 
 Generate Images From A Text Prompt Using Various Stable Diffusion Models Right Inside Discord Chat 😀
@@ -39,13 +40,19 @@ Only Host The Bot, No Need Self-Host Any Resource Consuming Models 😉
 
 
 # 🥏 Self-Hosting Guide:
-> You Can Either Use The [Dockerized Setup]() Or Use [Non-Dockerized Setup]() 🙃
+> You Can Either Use The [Dockerized Setup](https://github.com/itskdhere/Stable-Diffusion-Discord-Bot#-dockerized-setup) Or Use [Non-Dockerized Setup](https://github.com/itskdhere/Stable-Diffusion-Discord-Bot#-non-dockerized-setup) 🙃
 
 ## 🐳 Dockerized Setup:
 ### 🧾 Requirements:
-- [Docker](https://docs.docker.com/engine/install/)
-- [Docker-Compose](https://docs.docker.com/compose/install/)
-- Atleast 1vCPU , 0.5GB RAM & 1GB Storage For The Bot.
+<li>
+<a href="https://docs.docker.com/engine/install/" target="_blank">Docker</a>    
+</li>
+<li>
+<a href="https://docs.docker.com/compose/install/" target="_blank">Docker-Compose</a>
+</li>
+<li>
+Atleast 1vCPU , 0.5GB RAM & 1GB Storage For The Bot.    
+</li>
 
 ### 📝 Steps:
 
@@ -75,23 +82,28 @@ vim .env
 ```bash
 docker-compose up -d
 ```
-> Learn More About Docker [Here](https://docs.docker.com/) &  Docker-Compose [Here](https://docs.docker.com/compose/)
+> Learn More About Docker [Here](https://docs.docker.com/) & Docker-Compose [Here](https://docs.docker.com/compose/)
 
 5. Use The Bot 🎉
 
 
 ## 🟢 Non-Dockerized Setup:
 ### 🧾 Requirements:
-- Git
-- Node.js v18
-- Atleast 1vCPU , 0.5GB RAM & 1GB Storage For The Bot.
-
+<li>
+<a href="https://git-scm.com/" target="_blank">Git</a>
+</li>
+<li>
+<a href="https://nodejs.org/" target="_blank">Node.js v18</a>
+</li>
+<li>
+Atleast 1vCPU , 0.5GB RAM & 1GB Storage For The Bot.
+</li>
 
 ### 📝 Steps:
 
 0. **Create A Discord Bot:**
 
-Create A Discord Bot From [Discord Developer Portal](https://discord.com/developers/applications). Keep The Client ID and Bot Token Handy. Add It To Your Server With Sample Invite URL Replacing `BOT_CLIENT_ID` With Bot's Client ID
+Create A Discord Bot From <a href="https://discord.com/developers/applications" target="_blank">Discord Developer Portal</a>. Keep The Client ID and Bot Token Handy. Add It To Your Server With Sample Invite URL Replacing `BOT_CLIENT_ID` With Bot's Client ID
 ```
 https://discord.com/api/oauth2/authorize?client_id=BOT_CLIENT_ID&permissions=414464724032&scope=applications.commands%20bot
 ```
