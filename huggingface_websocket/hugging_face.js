@@ -88,7 +88,7 @@ async function hf_ws(interaction, sessionHash, prompt, negativePrompt) {
                 let attachmentArr = base64ToImg(output, sessionHash);
                 const files = Array.isArray(attachmentArr) ? attachmentArr : [];
 
-                interaction.editReply({ content: `"${prompt}" ~ ${settings.models[i].name} \n`, files: files });
+                interaction.editReply({ content: `"${prompt}" \n~Model: ${settings.models[i].name} \nGuidance Scale: ${settings.models[i].guidanceScale} \n`, files: files });
                 break;
         }
 

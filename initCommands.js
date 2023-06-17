@@ -53,7 +53,7 @@ let commands = [
             },
             {
                 name: "negative-prompt",
-                description: "Negative Prompt (only for Stable Diffusion v2.1)",
+                description: "Negative Prompt [Only For \"(4 Images) Stable Diffusion v2.1\"]",
                 type: 3,
                 required: false
             }
@@ -61,19 +61,19 @@ let commands = [
     },
     {
         name: 'settings',
-        description: 'View/Change Bot Settings',
+        description: 'View / Change Bot Settings',
         dm_permission: false,
         options: [
             {
                 name: "model",
-                description: "Select Default Model",
+                description: "Select Default Stable Diffusion Model",
                 type: 3,
                 required: false,
                 choices: []
             },
             {
                 name: "guidance-scale",
-                description: "Set Guidance Scale (only for v2.1) [Value between 0 and 50]",
+                description: "Set Guidance Scale [Only For \"(4 Images) Stable Diffusion v2.1\" & Value between 0 and 50]",
                 type: 3,
                 min_value: 0,
                 max_value: 50,

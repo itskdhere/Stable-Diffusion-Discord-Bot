@@ -5,8 +5,8 @@ async function imagineInteractionHandler(interaction) {
   const prompt = interaction.options.getString("prompt");
   const negativePrompt = interaction.options.getString("negative-prompt");
 
-  console.log(prompt);
-  console.log(negativePrompt);
+  console.log('+ve: ' + prompt);
+  console.log('-ve: ' + negativePrompt);
 
   await interaction.reply({ content: "Queued...⏲" });
 
