@@ -90,13 +90,19 @@ cp .env.example .env
 vim .env
 ```
 
-4. **Start The Bot In Production Mode:**
+4. **Build:**
 ```bash
-docker-compose up -d
+docker build -t itskdhere/sd:1.1.1 .
 ```
+
+5. **Start:**
+```bash
+docker run -d --name sd itskdhere/sd:1.1.1
+```
+
 > Learn More About Docker [Here](https://docs.docker.com/) & Docker-Compose [Here](https://docs.docker.com/compose/)
 
-5. Use The Bot 🎉
+6. Use The Bot 🎉
 
 
 ## 🟢 Non-Dockerized Setup:
@@ -151,7 +157,7 @@ nano .env
 ```bash
 npm run start
 ```
-***Or,*** **If You Want To Run The Bot In Production Mode:**
+***Or,*** **If You Want To Run The Bot In Background:**
 ```bash
 npm install pm2 -g
 ```

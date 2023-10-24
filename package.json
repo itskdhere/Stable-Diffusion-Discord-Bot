@@ -1,22 +1,24 @@
 {
   "name": "stable-diffusion-discord-bot",
-  "version": "1.1.0",
-  "description": "",
+  "version": "1.1.1",
+  "description": "Generate Images From A Text Prompt Using Various Stable Diffusion Models",
+  "author": "itskdhere",
+  "license": "MIT",
+  "private": "true",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "test": "echo \"Error: no test specified\"",
+    "start": "node .",
     "cmd": "node initCommands.js",
-    "prod": "pm2 start index.js --name sd-bot"
+    "prod": "pm2 start . --name sd-bot",
+    "dev": "node --watch ."
   },
-  "author": "itskdhere",
-  "license": "MIT",
   "dependencies": {
-    "axios": "^1.4.0",
-    "chalk": "^5.2.0",
-    "discord.js": "^14.11.0",
-    "dotenv": "^16.1.4",
-    "ws": "^8.13.0"
+    "axios": "^1.5.1",
+    "chalk": "^5.3.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "ws": "^8.14.2"
   }
 }
