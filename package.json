@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\"",
     "start": "node .",
     "cmd": "node initCommands.js",
-    "prod": "pm2 start . --name sd-bot",
+    "prod": "pm2 start index.js --name sd-bot",
     "dev": "node --watch ."
   },
   "dependencies": {
