@@ -42,7 +42,7 @@ async function main() {
 
 main().catch(e => console.log(chalk.red(e)));
 
-if (process.env.HTTP_SERVER == true) {
+if (process.env.HTTP_SERVER === 'true') {
     http.createServer((req, res) => res.end('BOT is Up && Running..!!')).listen(process.env.PORT);
 }
 
