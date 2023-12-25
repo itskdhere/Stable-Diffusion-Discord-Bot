@@ -92,12 +92,12 @@ vim .env
 
 4. **Build:**
 ```bash
-docker build -t itskdhere/sd:1.1.1 .
+docker build -t itskdhere/sd:1.1.3 .
 ```
 
 5. **Start:**
 ```bash
-docker run -d --name sd itskdhere/sd:1.1.1
+docker run -d -p 7860:7860 --name sd itskdhere/sd:1.1.3
 ```
 
 > Learn More About Docker [Here](https://docs.docker.com/) & Docker-Compose [Here](https://docs.docker.com/compose/)
@@ -111,7 +111,7 @@ docker run -d --name sd itskdhere/sd:1.1.1
 <a href="https://git-scm.com/" target="_blank">Git</a>
 </li>
 <li>
-<a href="https://nodejs.org/" target="_blank">Node.js v18</a>
+<a href="https://nodejs.org/" target="_blank">Node.js v20</a>
 </li>
 <li>
 Atleast 1vCPU , 0.5GB RAM & 1GB Storage For The Bot.
