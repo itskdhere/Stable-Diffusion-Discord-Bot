@@ -1,4 +1,4 @@
-import { Client, Partials, GatewayIntentBits, ActivityType, ChannelType } from 'discord.js';
+import { Client, Partials, GatewayIntentBits, ActivityType } from 'discord.js';
 import http from 'http';
 import axios from 'axios';
 import chalk from 'chalk';
@@ -9,26 +9,25 @@ dotenv.config();
 import initDiscordCommands from './initCommands.js';
 import commandHandler from './commandHandler.js';
 
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildIntegrations,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.DirectMessageTyping,
+        GatewayIntentBits.MessageContent,
+    ],
+    partials: [Partials.Channel]
+});
+
 async function main() {
     await initDiscordCommands().catch(e => console.log(chalk.red(e)));
-
-    const client = new Client({
-        intents: [
-            GatewayIntentBits.Guilds,
-            GatewayIntentBits.GuildMessages,
-            GatewayIntentBits.GuildIntegrations,
-            GatewayIntentBits.DirectMessages,
-            GatewayIntentBits.DirectMessageTyping,
-            GatewayIntentBits.MessageContent,
-        ],
-        partials: [Partials.Channel]
-    });
 
     client.once('ready', () => {
         console.log(`Logged in as ${chalk.blueBright(client.user.tag)}`);
         console.log(chalk.greenBright('Connected to Discord Gateway'));
         console.log(new Date());
-
         client.user.setStatus('online');
         client.user.setActivity(process.env.ACTIVITY_NAME, { type: ActivityType.Playing });
     });
@@ -37,16 +36,23 @@ async function main() {
         commandHandler(interaction);
     });
 
-    client.login(process.env.DISCORD_BOT_TOKEN).catch(e => console.log(chalk.red(e)));
+    client
+        .login(process.env.DISCORD_BOT_TOKEN)
+        .catch(e => console.log(chalk.red(e)));
 }
 
-main().catch(e => console.log(chalk.red(e)));
+main()
+    .catch(e => console.log(chalk.red(e)));
 
 if (process.env.HTTP_SERVER === 'true') {
-    http.createServer((req, res) => res.end('BOT is Up && Running..!!')).listen(process.env.PORT);
+    http
+        .createServer((req, res) => res.end('BOT is Up && Running..!!'))
+        .listen(process.env.PORT);
 }
 
 setInterval(() => {
+    client.user.setActivity(process.env.ACTIVITY_NAME, { type: ActivityType.Playing });
+
     axios
         .get('https://discord.com/api/v10')
         .catch(error => {
@@ -58,4 +64,4 @@ setInterval(() => {
             }
         });
 
-}, 30000);
+}, 30 * 1000); // 30 Seconds
